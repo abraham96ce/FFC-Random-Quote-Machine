@@ -46,9 +46,9 @@ const RandomQuote = () => {
           <button id="new-quote" onClick={random}>
             <img src={reload_icon} alt="Reload Quote" />
           </button>
-          <a id="tweet-quote" href={`https://twitter.com/intent/tweet?text=${quote.text} - ${quote.author}`} target="_blank" rel="noopener noreferrer">
+          <button id="tweet-quote" onClick={twitter}>
             <img src={X_icon} alt="Tweet Quote" />
-          </a>
+          </button>
         </div>
       </div>
     </div>
