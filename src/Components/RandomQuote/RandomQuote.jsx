@@ -32,9 +32,8 @@ const RandomQuote = () => {
     setQuote(select);
   };
 
-  const twitter = () => {
-    window.open(`https://twitter.com/intent/tweet?text=${quote.text} - ${quote.author}`);
-  }
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${quote.text} - ${quote.author}`)}`;
+
 
   return (
     <div id="quote-box" className='container'>
@@ -46,9 +45,9 @@ const RandomQuote = () => {
           <button id="new-quote" onClick={random}>
             <img src={reload_icon} alt="Reload Quote" />
           </button>
-          <button id="tweet-quote" onClick={twitter}>
+          <a id="tweet-quote" href={twitterUrl}>
             <img src={X_icon} alt="Tweet Quote" />
-          </button>
+          </a>
         </div>
       </div>
     </div>
